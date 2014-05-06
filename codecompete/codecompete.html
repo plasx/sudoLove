@@ -1,0 +1,75 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <!-- Firebase-->
+        <script src="https://cdn.firebase.com/js/client/1.0.11/firebase.js"></script>
+        <!-- Codemirror -->
+        <link rel="stylesheet" href="codemirror/codemirror.css" />
+        <script src="codemirror/codemirror.js"></script>
+        <!-- Codemirror Modes -->
+        <script src="codemirror/javascript.js"></script>
+        <!-- <script src="codemirror/css.js"></script> -->
+        <!-- Firepad -->
+        <link rel="stylesheet" href="firepad/firepad.css" />
+        <script src="firepad/firepad.js"></script>
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="style/style.css" />
+    </head>
+    <body>
+        <h1>Code Compete</h1>
+        <p class="instructions-container">
+            <strong>Instructions: </strong>
+            <span id="instructions">Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".</span>
+        </p>
+        <p class="requirements-container">
+            <strong>Language: </strong>
+            <span id="language">JavaScript</span>
+            <em>(Note: Use <code>print(...);</code> instead of <code>console.log(...);</code>)</em>
+        </p>
+        <div class="firepad-input">
+            <div id="firepad1"></div><!--
+            --><div id="firepad2"></div>
+            <br />
+            <table>
+                <tr>
+                    <td><button id="submit-firepad1">Submit</button></td>
+                    <td><button id="submit-firepad2">Submit</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="firepad-output">
+            <div class="output-container">
+            <div id="output1"></div>
+        </div><!--
+            --><div class="output-container">
+                <div id="output2"></div>
+            </div>
+        </div>
+        <input type="submit" value="Next" id="next" />
+        <!-- Codemirror initialization -->
+        <script>
+        var codeMirror1 = CodeMirror(document.getElementById('firepad1'), {
+            lineWrapping: true,
+            lineNumbers: true,
+            mode: "javascript",
+            readOnly: false
+        });
+        var codeMirror2 = CodeMirror(document.getElementById('firepad2'), {
+            lineWrapping: true,
+            lineNumbers: true,
+            mode: "javascript",
+            readOnly: false
+        });
+        </script>
+        <!-- jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!-- Script -->
+        <script src="script/script.js"></script>
+        <script>
+            $("#next").on("touchstart click", function(e) {
+                e.preventDefault(); e.stopPropagation();
+                window.location.href = "/plasx/sudolove/workspace/bootstrap/profile.html";
+            });
+        </script>
+    </body>
+</html>

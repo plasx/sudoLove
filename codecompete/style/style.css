@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+}
+code {
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-family: monospace;
+    font-size: 1.2em;
+}
+h1 {
+    font-family: "Courier New", monospace;
+    font-size: 2em;
+    margin: 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.instructions-container,
+.requirements-container {
+    margin: 1em auto;
+    width: 40%;
+}
+.firepad-input,
+.firepad-output {
+    text-align: center;
+}
+#firepad1,
+#firepad2 {
+    font-size: 1.2em;
+}
+#firepad1,
+#firepad2,
+.output-container {
+    display: inline-block;
+    margin: 0.5%;
+    width: 49%;
+    zoom: 1;
+    *display: inline; /* IE support */
+}
+.transparent {
+    opacity: 0.5;
+}
+.firepad,
+.CodeMirror {
+    background: #eee;
+}
+.powered-by-firepad {
+    display: none;
+}
+table {
+    text-align: center;
+    width: 100%;
+}
+#submit-firepad1,
+#submit-firepad2 {
+    font-size: 1em;
+}
+.output-container {
+    background: #333;
+    color: #fff;
+    height: 100px;
+    overflow: auto;
+    text-align: left;
+}
+#output1,
+#output2 {
+    margin: 0.5em;
+    white-space: pre;
+}
+@media only all and (max-width: 800px) {
+    p {
+        width: 80% !important;
+    }
+}
